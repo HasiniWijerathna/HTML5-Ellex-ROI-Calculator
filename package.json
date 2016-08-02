@@ -64,7 +64,7 @@
       "locator": "ios"
     }
   ],
-  "name": "HTML5 Ellex ROI Calculator",
+  "name": "HTML5-Ellex-ROI-Calculator",
   "description": "HTML5 Ellex ROI Calculator: Html5 Applet",
   "scripts": {
     "karma": "gulp --gulpfile test/gulpfile.js --cwd ./ karma-debug",

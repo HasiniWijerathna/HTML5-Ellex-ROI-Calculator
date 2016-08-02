@@ -6,3 +6,4 @@ typings/*
 !typings/main.d.ts
 .DS_Store
 coverage/
+npm-debug.log
