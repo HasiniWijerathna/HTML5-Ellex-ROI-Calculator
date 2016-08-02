@@ -3,6 +3,7 @@ import { Platform, ionicBootstrap } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
 import { HomePageComponent } from './pages/home/home';
+import { DataService } from './providers/data-service/data-service';
 
 
 @Component({
@@ -20,4 +21,5 @@ export class MyAppComponent {
   }
 }
 
-ionicBootstrap(MyAppComponent, [], {prodMode: true});
+ionicBootstrap(MyAppComponent, [DataService], { prodMode: true });
+;
