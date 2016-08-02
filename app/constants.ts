@@ -3,112 +3,112 @@ export class Constants {
 
   public static PRODUCTS = [
     {
-      productId: 1,
-      productName: 'Tango',
-      productProcedures: [1, 2, 3]
+      id: 1,
+      name: 'Tango',
+      procedures: [1, 2, 3]
     },
     {
-      productId: 2,
-      productName: 'Solo',
-      productProcedures: [1]
+      id: 2,
+      name: 'Solo',
+      procedures: [1]
     },
     {
-      productId: 3,
-      productName: 'Ultra Q Reflex',
-      productProcedures: [4, 2, 5]
+      id: 3,
+      name: 'Ultra Q Reflex',
+      procedures: [4, 2, 5]
     },
     {
-      productId: 4,
-      productName: 'Ultra Q',
-      productProcedures: [2, 5]
+      id: 4,
+      name: 'Ultra Q',
+      procedures: [2, 5]
     },
     {
-      productId: 5,
-      productName: 'Integre Pro Scan',
-      productProcedures: [6, 5, 7, 8, 9]
+      id: 5,
+      name: 'Integre Pro Scan',
+      procedures: [6, 5, 7, 8, 9]
     },
     {
-      productId: 6,
-      productName: 'Integre Pro',
-      productProcedures: [6, 5, 7, 8, 9]
+      id: 6,
+      name: 'Integre Pro',
+      procedures: [6, 5, 7, 8, 9]
     },
     {
-      productId: 7,
-      productName: 'Solitaire',
-      productProcedures: [6, 5, 7, 8, 9]
+      id: 7,
+      name: 'Solitaire',
+      procedures: [6, 5, 7, 8, 9]
     },
     {
-      productId: 8,
-      productName: 'Eye Cubed',
-      productProcedures: [10, 11, 12, 13]
+      id: 8,
+      name: 'Eye Cubed',
+      procedures: [10, 11, 12, 13]
     },
     {
-      productId: 9,
-      productName: 'iTrack',
-      productProcedures: [14, 15]
+      id: 9,
+      name: 'iTrack',
+      procedures: [14, 15]
     }
   ];
 
   public static PROCEDURES = [
     {
-      procedureId: 1,
-      procedureName: 'ALT/SLT'
+      id: 1,
+      name: 'ALT/SLT'
     },
     {
-      procedureId: 2,
-      procedureName: 'YAG Capsulotomy'
+      id: 2,
+      name: 'YAG Capsulotomy'
     },
     {
-      procedureId: 3,
-      procedureName: 'Laser Peripheral Iridotomy'
+      id: 3,
+      name: 'Laser Peripheral Iridotomy'
     },
     {
-      procedureId: 4,
-      procedureName: 'Laser Vitreolysis'
+      id: 4,
+      name: 'Laser Vitreolysis'
     },
     {
-      procedureId: 5,
-      procedureName: 'Laser Peripheral Iridotomy'
+      id: 5,
+      name: 'Laser Peripheral Iridotomy'
     },
     {
-      procedureId: 6,
-      procedureName: 'Retina PRP'
+      id: 6,
+      name: 'Retina PRP'
     },
     {
-      procedureId: 7,
-      procedureName: 'Focal laser retina'
+      id: 7,
+      name: 'Focal laser retina'
     },
     {
-      procedureId: 8,
-      procedureName: 'Repair of RD w/laser'
+      id: 8,
+      name: 'Repair of RD w/laser'
     },
     {
-      procedureId: 9,
-      procedureName: 'Prophylaxis for RD w/laser'
+      id: 9,
+      name: 'Prophylaxis for RD w/laser'
     },
     {
-      procedureId: 10,
-      procedureName: 'A-scan, Diagnostic'
+      id: 10,
+      name: 'A-scan, Diagnostic'
     },
     {
-      procedureId: 11,
-      procedureName: 'B-scan'
+      id: 11,
+      name: 'B-scan'
     },
     {
-      procedureId: 12,
-      procedureName: 'UBM'
+      id: 12,
+      name: 'UBM'
     },
     {
-      procedureId: 13,
-      procedureName: 'A-scan w/IOL Calculation'
+      id: 13,
+      name: 'A-scan w/IOL Calculation'
     },
     {
-      procedureId: 14,
-      procedureName: 'Transluminal dilation of outflow canal, no retention of device or stent'
+      id: 14,
+      name: 'Transluminal dilation of outflow canal, no retention of device or stent'
     },
     {
-      procedureId: 15,
-      procedureName: 'Transluminal dilation of outflow canal, with retention of device or stent'
+      id: 15,
+      name: 'Transluminal dilation of outflow canal, with retention of device or stent'
     }
   ];
 

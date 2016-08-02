@@ -3,10 +3,18 @@
 
   <div padding>
     <ion-item>
-      <ion-label>Gaming</ion-label>
-      <ion-select [(ngModel)]="roiData.product">
-        <ion-option *ngFor="let product of products">{{product.productName}}</ion-option>
+      <ion-label>Select Product</ion-label>
+      <ion-select [(ngModel)]="roiData.product" (ionChange)="onChange()">
+        <ion-option *ngFor="let product of products" [value]="product">{{product.name}}</ion-option>
       </ion-select>
     </ion-item>
+
+    <div *ngIf="roiData.procedures">
+      <!-- Go insied ONLY IF there is a selected product -->
+      <ion-item *ngFor="let procedure of roiData.procedures">
+        <ion-label>{{procedure.name}}</ion-label>
+        <ion-input type="number" [(ngModel)]="procedure.numberOfPatients"></ion-input>
+      </ion-item>
+    </div>
   </div>
 </ion-content>
