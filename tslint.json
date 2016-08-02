@@ -66,8 +66,8 @@
     "component-selector-name": [true, "kebab-case"],
     "directive-selector-type": [true, "attribute"],
     "component-selector-type": [true, "element"],
-    "directive-selector-prefix": [true, "app"],
-    "component-selector-prefix": [true, "app"],
+    "directive-selector-prefix": [true, "roi"],
+    "component-selector-prefix": [true, "roi"],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,
@@ -77,7 +77,7 @@
     "no-forward-ref" :true,
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
-    "pipe-naming": [true, "camelCase", "app"],
+    "pipe-naming": [true, "camelCase", "roi"],
     "component-class-suffix": true,
     "directive-class-suffix": true
   }

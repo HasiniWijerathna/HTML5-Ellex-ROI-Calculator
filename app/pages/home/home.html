@@ -1,12 +1,12 @@
-<ion-navbar *navbar>
-  <ion-title>
-    Ionic Blank
-  </ion-title>
-</ion-navbar>
+<ion-content class="home">
+  <roi-header title="Practice Overview"></roi-header>
 
-<ion-content class="home" padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div padding>
+    <ion-item>
+      <ion-label>Gaming</ion-label>
+      <ion-select [(ngModel)]="roiData.product">
+        <ion-option *ngFor="let product of products">{{product.productName}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
 </ion-content>
