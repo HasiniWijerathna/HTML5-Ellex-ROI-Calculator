@@ -16,7 +16,7 @@ export class HomePageComponent {
   private roiData: ROIData;
 
   private products = Constants.PRODUCTS;
-  private procedures = Constants.PROCEDURES;
+  private procedures = this.arrangeProcedureData(Constants.PROCEDURES);
 
   constructor(navController: NavController, dataService: DataService) {
     this.navController = navController;
@@ -27,25 +27,29 @@ export class HomePageComponent {
 
   private onChange(): void {
     let currentProduct = this.roiData.product;
-    let proceduresOfProduct = this.fetchProceduresOfProduct(currentProduct);
+    let proceduresOfProduct = this.fetchProceduresOfProduct(currentProduct, this.procedures);
 
     this.roiData.procedures = proceduresOfProduct;
   }
 
-  private fetchProceduresOfProduct(product): any[] {
+  private fetchProceduresOfProduct(product, procedures): any[] {
     let result = [];
 
     if (product && product.procedures && product.procedures.length) {
       product.procedures.forEach((procedureId) => {
-        for (let index = 0; index < Constants.PROCEDURES.length; length++) {
-          if (procedureId === Constants.PROCEDURES[index].id) {
-            // Found the procedure of ID
-            result.push(Constants.PROCEDURES[index]);
-            break;
-          }
+        result.push(procedures[procedureId]);
+      });
+    }
 
-          index++;
-        }
+    return result;
+  }
+
+  private arrangeProcedureData(procedures): any {
+    let result = {};
+
+    if (procedures && procedures.length) {
+      procedures.forEach((procedure) => {
+        result[procedure.id] = procedure;
       });
     }
 
