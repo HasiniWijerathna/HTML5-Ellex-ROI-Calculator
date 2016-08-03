@@ -5,6 +5,7 @@ import { DataService } from '../../providers/data-service/data-service';
 import { ROIData } from '../../models/roi-data/roi-data';
 import { ROIHeaderComponent } from '../../components/roi-header/roi-header';
 import { Constants } from '../../constants';
+import { ReimbursementPageComponent } from '../reimbursement/reimbursement';
 
 @Component({
   templateUrl: 'build/pages/home/home.html',
@@ -54,6 +55,10 @@ export class HomePageComponent {
     }
 
     return result;
+  }
+
+  private next(): void {
+    this.navController.push(ReimbursementPageComponent);
   }
 
 }
