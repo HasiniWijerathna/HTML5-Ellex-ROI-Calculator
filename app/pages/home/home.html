@@ -13,9 +13,11 @@
     <div *ngIf="roiData.procedures">
       <!-- Go insied ONLY IF there is a selected product -->
       <ion-item *ngFor="let procedure of roiData.procedures">
-        <ion-label>{{procedure.name}}</ion-label>
+        <ion-label>{{procedure.name}}<div >Number of patients treated</div></ion-label>
         <ion-input type="number" [(ngModel)]="procedure.numberOfPatients"></ion-input>
       </ion-item>
+
+
     </div>
   </div>
 </ion-content>

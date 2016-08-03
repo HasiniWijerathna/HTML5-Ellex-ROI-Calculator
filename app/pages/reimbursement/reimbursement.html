@@ -16,5 +16,14 @@
       <ion-option *ngFor="let state of roiData.region.states" [value]="state">{{state.name}}</ion-option>
     </ion-select>
   </ion-item>
+
+
+  <ion-item *ngFor="let procedure of roiData.procedures">
+    <ion-label>{{procedure.name}}<div >Patient Fee ($)</div></ion-label>
+    <ion-input type="number" [(ngModel)]="procedure.numberOfPatients"></ion-input>
+  </ion-item>
 </ion-content>
-<!-- </ion-content> -->
+
+<ion-footer-bar class="footer">
+  <button light (click)="next()" class="positive-button">Calculate Revenue</button>
+</ion-footer-bar>
