@@ -9,5 +9,12 @@
       <ion-option *ngFor="let region of regions" [value]="region">{{region.name}}</ion-option>
     </ion-select>
   </ion-item>
+
+  <ion-item *ngIf="roiData.region && roiData.region.states.length">
+    <ion-label>Select state</ion-label>
+    <ion-select [(ngModel)]="roiData.state">
+      <ion-option *ngFor="let state of roiData.region.states" [value]="state">{{state.name}}</ion-option>
+    </ion-select>
+  </ion-item>
 </ion-content>
 <!-- </ion-content> -->
