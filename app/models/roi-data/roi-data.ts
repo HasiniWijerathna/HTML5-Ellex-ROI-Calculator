@@ -4,6 +4,9 @@ export class ROIData {
   public product = null;
   public procedures = [];
 
+  //reimbursement
+  public region = null;
+
   constructor() {
 
   }
