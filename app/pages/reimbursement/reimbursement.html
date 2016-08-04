@@ -17,11 +17,21 @@
     </ion-select>
   </ion-item>
 
+  <div *ngFor="let procedure of roiData.procedures">
+    <ion-item>
+      <ion-label>{{procedure.name}}</ion-label>
+      <ion-select [(ngModel)]="procedure.option">
+        <ion-option *ngFor="let option of procedure.options" [value]="option">{{option.name}}</ion-option>
+      </ion-select>
+      <!-- TODO : Add the select here -->
+    </ion-item>
 
-  <ion-item *ngFor="let procedure of roiData.procedures">
-    <ion-label>{{procedure.name}}<div >Patient Fee ($)</div></ion-label>
-    <ion-input type="number" [(ngModel)]="procedure.numberOfPatients"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label>Patient Fee ($)</ion-label>
+      <ion-input type="number" [(ngModel)]="procedure.numberOfPatients"></ion-input>
+    </ion-item>
+  </div>
+
 </ion-content>
 
 <ion-footer-bar class="footer">

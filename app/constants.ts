@@ -1,28 +1,28 @@
 export class Constants {
   public static APP_NAME: string = 'HTML5 Ellex ROI Calculator';
 
-  public static OPTIONS = [
-    {
+  public static OPTIONS = {
+    1: {
       id: 1,
       name: 'Medicare'
     },
-    {
+    2: {
       id: 2,
       name: 'MD Private Clinic'
     },
-    {
+    3: {
       id: 3,
       name: 'MD Facility'
     },
-    {
+    4: {
       id: 4,
       name: 'Hospital'
     },
-    {
+    5: {
       id: 5,
       name: 'ASC Facility'
     }
-  ];
+  };
 
   public static REGIONS = [
     {
@@ -352,11 +352,11 @@ export class Constants {
     {
       id: 1,
       name: 'ALT/SLT',
-      options: [1, 2, 3, 4, 5],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 341.46,
           3: 300.7,
@@ -365,18 +365,22 @@ export class Constants {
         },
         2: {
           // Optional division
+          options: [1],
           1: 451.10
         },
         3: {
           // Optional division
+          options: [1],
           1: 125.8
         },
         4: {
           // Optional division
+          options: [1],
           1: 134.06
         },
         5: {
           // Optional division
+          options: [1],
           1: 89700
         }
       }
@@ -384,11 +388,11 @@ export class Constants {
     {
       id: 2,
       name: 'YAG Capsulotomy',
-      options: [1, 2, 3, 4, 5],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 333.23,
           3: 314.64,
@@ -397,18 +401,22 @@ export class Constants {
         },
         2: {
           // Optional division
+          options: [1],
           1: 353.35
         },
         3: {
           // Optional division
+          options: [1],
           1: 83.6
         },
         4: {
           // Optional division
+          options: [1],
           1: 148.81
         },
         5: {
           // Optional division
+          options: [1],
           1: 13800
         }
       }
@@ -416,11 +424,11 @@ export class Constants {
     {
       id: 3,
       name: 'Laser Peripheral Iridotomy',
-      options: [1, 2, 3, 4, 5],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 298.91,
           3: 238.48,
@@ -429,18 +437,22 @@ export class Constants {
         },
         2: {
           // Optional division
+          options: [1],
           1: 353.35
         },
         3: {
           // Optional division
+          options: [1],
           1: 83.6
         },
         4: {
           // Optional division
+          options: [1],
           1: 134.06
         },
         5: {
           // Optional division
+          options: [1],
           1: 66200
         }
       }
@@ -448,11 +460,11 @@ export class Constants {
     {
       id: 4,
       name: 'Laser Vitreolysis',
-      options: [1, 2, 3, 4, 5],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 0,
           3: 0,
@@ -461,18 +473,22 @@ export class Constants {
         },
         2: {
           // Optional division
+          options: [1],
           1: 0
         },
         3: {
           // Optional division
+          options: [1],
           1: 105.17
         },
         4: {
           // Optional division
+          options: [1],
           1: 0
         },
         5: {
           // Optional division
+          options: [1],
           1: 0
         }
       }
@@ -480,11 +496,11 @@ export class Constants {
     {
       id: 5,
       name: 'Laser Peripheral Iridotomy',
-      options: [1, 2, 3, 4, 5],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 298.91,
           3: 238.48,
@@ -493,18 +509,22 @@ export class Constants {
         },
         2: {
           // Optional division
+          options: [1],
           1: 353.35
         },
         3: {
           // Optional division
+          options: [1],
           1: 83.6
         },
         4: {
           // Optional division
+          options: [1],
           1: 134.06
         },
         5: {
           // Optional division
+          options: [1],
           1: 66200
         }
       }
@@ -512,11 +532,11 @@ export class Constants {
     {
       id: 6,
       name: 'Retina PRP',
-      options: [1, 2, 3, 4, 5],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 1011.14,
           3: 957.87,
@@ -525,18 +545,22 @@ export class Constants {
         },
         2: {
           // Optional division
+          options: [1],
           1: 451.10
         },
         3: {
           // Optional division
+          options: [1],
           1: 114
         },
         4: {
           // Optional division
+          options: [1],
           1: 188.50
         },
         5: {
           // Optional division
+          options: [1],
           1: 159600
         }
       }
@@ -544,11 +568,11 @@ export class Constants {
     {
       id: 7,
       name: 'Focal laser retina',
-      options: [1, 2, 3, 4, 5],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 524.16,
           3: 506.29,
@@ -557,18 +581,22 @@ export class Constants {
         },
         2: {
           // Optional division
+          options: [1],
           1: 451.10
         },
         3: {
           // Optional division
+          options: [1],
           1: 146.3
         },
         4: {
           // Optional division
+          options: [1],
           1: 123.87
         },
         5: {
           // Optional division
+          options: [1],
           1: 100200
         }
       }
@@ -576,11 +604,11 @@ export class Constants {
     {
       id: 8,
       name: 'Repair of RD w/laser',
-      options: [1, 2, 3, 4, 5],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 726.54,
           3: 651.81,
@@ -589,18 +617,22 @@ export class Constants {
         },
         2: {
           // Optional division
+          options: [1],
           1: 902.30
         },
         3: {
           // Optional division
+          options: [1],
           1: 113.36
         },
         4: {
           // Optional division
+          options: [1],
           1: 123.87
         },
         5: {
           // Optional division
+          options: [1],
           1: 159600
         }
       }
@@ -608,11 +640,11 @@ export class Constants {
     {
       id: 9,
       name: 'Prophylaxis for RD w/laser',
-      options: [1, 2, 3, 4, 5],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 532.75,
           3: 503.43,
@@ -621,18 +653,22 @@ export class Constants {
         },
         2: {
           // Optional division
+          options: [1],
           1: 0
         },
         3: {
           // Optional division
+          options: [1],
           1: 113.36
         },
         4: {
           // Optional division
+          options: [1],
           1: 123.87
         },
         5: {
           // Optional division
+          options: [1],
           1: 159600
         }
       }
@@ -640,11 +676,11 @@ export class Constants {
     {
       id: 10,
       name: 'A-scan, Diagnostic',
-      options: [1, 2, 3, 4, 5],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 103.69,
           3: 103.69,
@@ -653,18 +689,22 @@ export class Constants {
         },
         2: {
           // Optional division
+          options: [1],
           1: 103.65
         },
         3: {
           // Optional division
+          options: [1],
           1: 36.66
         },
         4: {
           // Optional division
+          options: [1],
           1: 0
         },
         5: {
           // Optional division
+          options: [1],
           1: 1500
         }
       }
@@ -672,11 +712,11 @@ export class Constants {
     {
       id: 11,
       name: 'B-scan',
-      options: [1, 2, 3, 4, 5],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 93.68,
           3: 0,
@@ -685,18 +725,22 @@ export class Constants {
         },
         2: {
           // Optional division
+          options: [1],
           1: 77
         },
         3: {
           // Optional division
+          options: [1],
           1: 47.88
         },
         4: {
           // Optional division
+          options: [1],
           1: 0
         },
         5: {
           // Optional division
+          options: [1],
           1: 3500
         }
       }
@@ -704,11 +748,11 @@ export class Constants {
     {
       id: 12,
       name: 'UBM',
-      options: [1, 2, 3, 4, 5],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 96.9,
           3: 0,
@@ -717,18 +761,22 @@ export class Constants {
         },
         2: {
           // Optional division
+          options: [1],
           1: 103.65
         },
         3: {
           // Optional division
+          options: [1],
           1: 46.58
         },
         4: {
           // Optional division
+          options: [1],
           1: 37.54
         },
         5: {
           // Optional division
+          options: [1],
           1: 3500
         }
       }
@@ -736,11 +784,11 @@ export class Constants {
     {
       id: 13,
       name: 'A-scan w/IOL Calculation',
-      options: [1, 2, 3, 4, 5],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 85.1,
           3: 0,
@@ -749,18 +797,22 @@ export class Constants {
         },
         2: {
           // Optional division
+          options: [1],
           1: 103.65
         },
         3: {
           // Optional division
+          options: [1],
           1: 34.11
         },
         4: {
           // Optional division
+          options: [1],
           1: 72.93
         },
         5: {
           // Optional division
+          options: [1],
           1: 1500
         }
       }
@@ -768,11 +820,11 @@ export class Constants {
     {
       id: 14,
       name: 'Transluminal dilation of outflow canal, no retention of device or stent',
-      options: [1],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 958.23,
           3: 958.23,
@@ -784,11 +836,11 @@ export class Constants {
     {
       id: 15,
       name: 'Transluminal dilation of outflow canal, with retention of device or stent',
-      options: [1],
       value: {
         // Regional division
         1: {
           // Optional division
+          options: [1, 2, 3, 4, 5],
           1: 0,
           2: 1033.63,
           3: 1003.63,

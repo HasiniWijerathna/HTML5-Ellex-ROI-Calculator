@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Platform, ActionSheet } from 'ionic-angular';
 
 /*
   Generated class for the RevenueSnapshotPage page.
@@ -11,5 +11,10 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'build/pages/revenue-snapshot/revenue-snapshot.html',
 })
 export class RevenueSnapshotPageComponent {
-  constructor(private nav: NavController) { }
+  private nav: NavController;
+
+  constructor(nav: NavController) {
+
+  }
+
 }
