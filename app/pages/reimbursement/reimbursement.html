@@ -21,9 +21,8 @@
     <ion-item>
       <ion-label>{{procedure.name}}</ion-label>
       <ion-select [(ngModel)]="procedure.option">
-        <ion-option *ngFor="let option of procedure.options" [value]="option">{{option.name}}</ion-option>
+        <ion-option *ngFor="let option of procedure.options" [value]="option">{{option.name}} (${{procedure.value[roiData.region.id][option.id]}})</ion-option>
       </ion-select>
-      <!-- TODO : Add the select here -->
     </ion-item>
 
     <ion-item>
@@ -31,7 +30,6 @@
       <ion-input type="number" [(ngModel)]="procedure.numberOfPatients"></ion-input>
     </ion-item>
   </div>
-
 </ion-content>
 
 <ion-footer-bar class="footer">

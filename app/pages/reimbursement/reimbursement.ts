@@ -34,7 +34,6 @@ export class ReimbursementPageComponent {
   private next(): void {
     this.nav.push(RevenueSnapshotPageComponent);
   }
-
   private arrangeProcedureData(procedures, options, region): void {
     if (procedures && procedures.length) {
       procedures.forEach((procedure) => {
@@ -51,15 +50,9 @@ export class ReimbursementPageComponent {
           // let index = 2;
           // options[index] = options[2] -> bar
         });
-
         procedure.options = optionObjects;
       });
     }
-
-    console.log(procedures);
-
   }
-
-
 
 }

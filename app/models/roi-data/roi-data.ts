@@ -7,7 +7,7 @@ export class ROIData {
   //reimbursement
   public region = null;
   public state = null;
-  public option = null;
+
 
   constructor() {
 
