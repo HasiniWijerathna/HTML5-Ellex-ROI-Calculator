@@ -1,16 +1,16 @@
-.row{
-  .col{
-    &.col-95{
-      @include column-genarate(95%);
-    }
-    &.col-5{
-      @include column-genarate(5%);
-      i{
-        &:before{
-          color: $light-gray;
+.revenue-snapshot{
+  .table-wapper{
+    table{
+      tr{
+        td{
+          &:not(:first-of-type){
+            width: 23%;
+          }
+          &:first-of-type{
+            width: 31%;
+          }
         }
       }
     }
   }
-}
 }

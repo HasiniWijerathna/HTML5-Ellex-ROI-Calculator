@@ -4,7 +4,20 @@
 
 <ion-content padding class="revenue-snapshot">
 
-
-
-
-</ion-content>
+  <div>
+    <table style="width:100%">
+      <tr>
+        <th></th>
+        <th>Weekly</th>
+        <th>Monthly</th>
+        <th>Annually</th>
+      </tr>
+      <tr *ngFor="let procedure of roiData.procedures">
+        <td>{{procedure.name}}</td>
+        <td>{{procedure.weeklyResult}}</td>
+        <td>{{procedure.monthlyResult}}</td>
+        <td>{{procedure.annualResult}}</td>
+      </tr>
+    </table>
+  </div>
+  </ion-content>
