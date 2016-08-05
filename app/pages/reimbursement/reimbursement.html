@@ -27,11 +27,11 @@
 
     <ion-item>
       <ion-label>Patient Fee ($)</ion-label>
-      <ion-input type="number" [(ngModel)]="procedure.numberOfPatients"></ion-input>
+      <ion-input type="number" [(ngModel)]="procedure.fees"></ion-input>
     </ion-item>
   </div>
 </ion-content>
 
 <ion-footer-bar class="footer">
-  <button light (click)="next()" class="positive-button">Calculate Revenue</button>
+  <button light (click)="add()" class="positive-button">Calculate Revenue</button>
 </ion-footer-bar>

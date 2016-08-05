@@ -58,6 +58,7 @@ export class HomePageComponent {
   }
 
   private next(): void {
+    this.dataService.setROIData(this.roiData);
     this.navController.push(ReimbursementPageComponent);
   }
 

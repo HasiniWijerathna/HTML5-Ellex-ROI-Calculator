@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, Platform, ActionSheet } from 'ionic-angular';
 
+import { DataService } from '../../providers/data-service/data-service';
+import { ROIData } from '../../models/roi-data/roi-data';
 /*
   Generated class for the RevenueSnapshotPage page.
 
@@ -12,8 +14,12 @@ import { NavController, Platform, ActionSheet } from 'ionic-angular';
 })
 export class RevenueSnapshotPageComponent {
   private nav: NavController;
+  private dataService: DataService;
+  private roiData: ROIData;
 
-  constructor(nav: NavController) {
+  constructor(nav: NavController, dataService: DataService) {
+    this.roiData = dataService.getROIData();
+    console.log(this.roiData);
 
   }
 
