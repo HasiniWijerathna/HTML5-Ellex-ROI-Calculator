@@ -9,11 +9,11 @@ export class ROIData {
   public product = null;
   public procedures = [];
 
-  //reimbursement
+  // reimbursement
   public region = null;
   public state = null;
 
-  //revenue-snapshot
+  // revenue-snapshot
   public totalWeeklyResult = null;
   public totalMonthlyResult = null;
   public totalAnnualResult = null;
@@ -38,8 +38,4 @@ export class ROIData {
   public calculateTotal(procedureId, weeklyResult) {
 
   }
-}
-) {
-
-}
 }

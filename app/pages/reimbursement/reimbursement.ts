@@ -5,7 +5,6 @@ import { DataService } from '../../providers/data-service/data-service';
 import { ROIData } from '../../models/roi-data/roi-data';
 import { Constants } from '../../constants';
 import { RevenueSnapshotPageComponent } from '../revenue-snapshot/revenue-snapshot';
-import { HomePageComponent } from '../home/home';
 
 @Component({
   templateUrl: 'build/pages/reimbursement/reimbursement.html',
@@ -15,8 +14,8 @@ export class ReimbursementPageComponent {
   private dataService: DataService;
   private roiData: ROIData;
 
-  private regions = Constants.REGIONS;
-  private options = Constants.OPTIONS;
+  public regions = Constants.REGIONS;
+  public options = Constants.OPTIONS;
 
   constructor(nav: NavController, dataService: DataService) {
     this.nav = nav;
@@ -25,11 +24,11 @@ export class ReimbursementPageComponent {
     this.roiData = dataService.getROIData();
   }
 
-  private onChange(): void {
+  public onChange(): void {
     this.arrangeProcedureData(this.roiData.procedures, this.options, this.roiData.region.id);
   }
 
-  private next(): void {
+  public next(): void {
     this.nav.push(RevenueSnapshotPageComponent);
   }
 

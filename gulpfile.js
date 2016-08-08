@@ -49,7 +49,7 @@ gulp.task('watch', ['clean'], function(done){
 
 gulp.task('build', ['lint', 'clean'], function(done){
   runSequence(
-    ['sass', 'html', 'fonts', 'scripts'],
+    ['sass', 'html', 'fonts', 'scripts', 'vendor'],
     function(){
       buildBrowserify({
         minify: isRelease,
@@ -70,6 +70,16 @@ gulp.task('lint', function() {
       formatter: "verbose"
     }))
     .pipe(tslint.report())
+});
+
+gulp.task('vendor', function() {
+  var sources = [
+    'node_modules/macsjs/macs.min.js'
+  ];
+  var destination = 'www/build/vendor';
+
+  return gulp.src(sources)
+    .pipe(gulp.dest(destination));
 });
 
 gulp.task('sass', buildSass);

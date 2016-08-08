@@ -16,7 +16,7 @@ export class HomePageComponent {
   private dataService: DataService;
   private roiData: ROIData;
 
-  private products = Constants.PRODUCTS;
+  public products = Constants.PRODUCTS;
   private procedures = this.arrangeProcedureData(Constants.PROCEDURES);
 
   constructor(navController: NavController, dataService: DataService) {
@@ -26,7 +26,7 @@ export class HomePageComponent {
     this.roiData = dataService.getROIData();
   }
 
-  private onChange(): void {
+  public onChange(): void {
     let currentProduct = this.roiData.product;
     let proceduresOfProduct = this.fetchProceduresOfProduct(currentProduct, this.procedures);
 
@@ -57,7 +57,7 @@ export class HomePageComponent {
     return result;
   }
 
-  private next(): void {
+  public next(): void {
     this.dataService.setROIData(this.roiData);
     this.navController.push(ReimbursementPageComponent);
   }
