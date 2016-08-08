@@ -5,19 +5,18 @@
 .positive-button {
   float: right;
 }
-.row{
-  .col{
-    &.col-95{
-      @include column-genarate(95%);
-    }
-    &.col-5{
-      @include column-genarate(5%);
-      i{
-        &:before{
-          color: $light-gray;
-        }
-      }
-    }
-  }
-}
-}
+// .row{
+//   .col{
+//     &.col-95{
+//       @include column-genarate(95%);
+//     }
+//     &.col-5{
+//       @include column-genarate(5%);
+//       i{
+//         &:before{
+//           color: $light-gray;
+//         }
+//       }
+//     }
+//   }
+// }

@@ -13,6 +13,10 @@ export class ROIData {
   public region = null;
   public state = null;
 
+  //revenue-snapshot
+  public totalWeeklyResult = null;
+  public totalMonthlyResult = null;
+  public totalAnnualResult = null;
 
   constructor() {
   }
@@ -30,4 +34,12 @@ export class ROIData {
 
     return weeklyResult;
   }
+
+  public calculateTotal(procedureId, weeklyResult) {
+
+  }
+}
+) {
+
+}
 }

@@ -58,6 +58,10 @@ export class ReimbursementPageComponent {
     let region = this.roiData.region;
     let procedures = this.roiData.procedures;
 
+    let totalWeeklyResult = 0;
+    let totalMonthlyResult = 0;
+    let totalAnnualResult = 0;
+
     procedures.forEach((procedure) => {
       let numberOfPatients = procedure.numberOfPatients;
       let option = procedure.option;
@@ -73,7 +77,16 @@ export class ReimbursementPageComponent {
       procedure.weeklyResult = weeklyResult;
       procedure.monthlyResult = monthlyResult;
       procedure.annualResult = annualResult;
+
+      totalWeeklyResult = totalWeeklyResult + weeklyResult;
+      totalMonthlyResult = totalMonthlyResult + monthlyResult;
+      totalAnnualResult = totalMonthlyResult + annualResult;
+
     });
+    this.roiData.totalWeeklyResult = totalWeeklyResult;
+    this.roiData.totalMonthlyResult = totalMonthlyResult;
+    this.roiData.totalAnnualResult = totalAnnualResult;
+
 
     this.dataService.setROIData(this.roiData);
     this.nav.push(RevenueSnapshotPageComponent);
