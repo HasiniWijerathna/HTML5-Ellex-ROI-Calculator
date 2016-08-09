@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Control, ControlGroup } from '@angular/common';
 import { NavController } from 'ionic-angular';
 
 import { DataService } from '../../providers/data-service/data-service';
@@ -6,6 +7,7 @@ import { ROIData } from '../../models/roi-data/roi-data';
 import { ROIHeaderComponent } from '../../components/roi-header/roi-header';
 import { Constants } from '../../constants';
 import { ReimbursementPageComponent } from '../reimbursement/reimbursement';
+import { emailAddressValidator, passwordValidator } from '../../validators/custom-validators';
 
 @Component({
   templateUrl: 'build/pages/home/home.html',
@@ -19,14 +21,22 @@ export class HomePageComponent {
   public products = Constants.PRODUCTS;
   private procedures = this.arrangeProcedureData(Constants.PROCEDURES);
 
+  private facilityForm: ControlGroup;
+
   constructor(navController: NavController, dataService: DataService) {
     this.navController = navController;
     this.dataService = dataService;
 
     this.roiData = dataService.getROIData();
+
+    this.facilityForm = new ControlGroup({
+      email: new Control('email', emailAddressValidator),
+      password: new Control('password', passwordValidator),
+    });
   }
 
   public onChange(): void {
+
     let currentProduct = this.roiData.product;
     let proceduresOfProduct = this.fetchProceduresOfProduct(currentProduct, this.procedures);
 

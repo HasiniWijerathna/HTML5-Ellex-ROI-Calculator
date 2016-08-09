@@ -22,7 +22,7 @@ export class ROIData {
   }
 
   /**
-   * Returns the calculated weekly cost
+   * Returns the calculated cost
    * @param  value             selected procedure option value
    * @param  fee               Patient fee
    * @param  numberOfPatients  number of patients per week

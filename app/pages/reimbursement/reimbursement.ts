@@ -86,7 +86,6 @@ export class ReimbursementPageComponent {
     this.roiData.totalMonthlyResult = totalMonthlyResult;
     this.roiData.totalAnnualResult = totalAnnualResult;
 
-
     this.dataService.setROIData(this.roiData);
     this.nav.push(RevenueSnapshotPageComponent);
   }

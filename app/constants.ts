@@ -1,5 +1,11 @@
 export class Constants {
+  // Class properties
+  public static MINIMUM_CHARACTERS_PASSWORD: number = 6;
   public static APP_NAME: string = 'HTML5 Ellex ROI Calculator';
+
+  public static VALIDATION_PATTERNS = {
+    EMAIL: /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/,
+  };
 
   public static OPTIONS = {
     1: {
@@ -850,7 +856,6 @@ export class Constants {
       }
     }
   ];
-
 
   constructor() { }
 }

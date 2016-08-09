@@ -12,6 +12,7 @@ declare let macs: any;
 })
 export class RevenueSnapshotPageComponent implements AfterViewChecked {
   private elementRef: ElementRef;
+  private nav: NavController;
   // private nav: NavController;
   // private dataService: DataService;
   private roiData: ROIData;
@@ -21,6 +22,7 @@ export class RevenueSnapshotPageComponent implements AfterViewChecked {
   constructor(elementRef: ElementRef, nav: NavController, dataService: DataService) {
     this.roiData = dataService.getROIData();
     this.elementRef = elementRef;
+    this.nav = nav;
   }
 
   // Lifecycle hook (gets executed after the view has been rendered or re-rendered)
@@ -46,4 +48,7 @@ export class RevenueSnapshotPageComponent implements AfterViewChecked {
     });
   }
 
+  private sumbit() {
+    alert('Login success');
+  }
 }

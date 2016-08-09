@@ -18,8 +18,14 @@
       </ion-item>
     </div>
   </div>
+
+  <form [ngFormModel]="facilityForm" (submit)="submit()">
+    <input ngControl="email" type="text" [(ngModel)]="roiData.email" placeholder="Your email">
+    <input ngControl="password" type="password" [(ngModel)]="roiData.password" placeholder="Your password">
+    <button type="submit" [disabled]="!facilityForm.valid">Log in</button>
+  </form>
 </ion-content>
 
 <ion-footer-bar class="footer">
-  <button light (click)="next()" class="positive-button">Reimbursement</button>
+  <button light (click)="next()" class="positive-button" >Reimbursement</button>
 </ion-footer-bar>
