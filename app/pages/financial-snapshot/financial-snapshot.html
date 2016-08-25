@@ -1,0 +1,61 @@
+<ion-navbar *navbar>
+  <ion-title>Financial Snapshot</ion-title>
+</ion-navbar>
+
+<ion-content padding class="Financial Snapshot">
+  <ion-list>
+    <button light (click)="clearFinancial()" class="positive-button">Clear Financial Snapshot</button>
+    <ion-item>
+      <ion-label>Unit Price</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="roiData.unitPrice"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Warranty Cost</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="roiData.warrantyCost" (ngModelChange)="onValuesChange()"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label> Total purchasingPrice : {{roiData.totalPurchasingPrice}} </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Down Payment/Deposit</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="roiData.downPayment" (ngModelChange)="onValuesChange()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Purchase Method</ion-label>
+
+      <ion-select [(ngModel)]="roiData.purchaseMethod">
+        <ion-option *ngFor="let purchaseMethod of purchaseMethods" [value]="purchaseMethod">{{purchaseMethod.type}}</ion-option>
+      </ion-select>
+      <!-- <div [hidden]="roiData.purchaseMethod === Cash"> -->
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Interest Rate (%)</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="roiData.interestRate"></ion-input>
+    </ion-item>
+    <!-- <div> -->
+    <ion-item>
+      <ion-label> Lease Amount : {{roiData.leasingAmount}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Lease Period(no.of months)</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="roiData.leasePeriod"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Lease Factor/Residual (%)</ion-label>
+      <ion-input type="text" value="" [(ngModel)]="roiData.leaseFactorResidual" (ngModelChange)="onValuesChange()"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Residual Value : {{ roiData.residual}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Monthly Lease Payment : {{roiData.monthlyPay}} </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+<ion-footer-bar class="footer">
+  <button light (click)="next()" class="positive-button">Calculate ROI</button>
+</ion-footer-bar>
