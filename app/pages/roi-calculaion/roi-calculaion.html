@@ -1,0 +1,57 @@
+<!--
+  Generated template for the RoiCalculaionPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-navbar *navbar>
+  <ion-title>ROI Calculaion</ion-title>
+</ion-navbar>
+
+<ion-content padding class="roi-calculaion">
+<div>
+    <table style="width:100%">
+      <tr>
+        <th></th>
+        <th>Monthly</th>
+        <th>Annually</th>
+      </tr>
+      <tr *ngFor="let procedure of roiData.procedures">
+        <td>{{procedure.name}}</td>
+        <td>{{procedure.monthlyResult}}</td>
+        <td>{{procedure.annualResult}}</td>
+      </tr>
+      <tr>
+        <td>Total Revenue</td>
+        <td>{{roiData.totalMonthlyResult}}</td>
+        <td>{{roiData.totalAnnualResult}}</td>
+      </tr>
+      <tr>
+        <td>Total Cost</td>
+        <td>{{roiData.totalMonthlyCost}}</td>
+        <td>{{roiData.totalAnnualCost}}</td>
+      </tr>
+      <tr>
+        <td>Net Revenue</td>
+        <td>{{roiData.totalMonthlyResult}}</td>
+        <td>{{roiData.totalAnnualResult}}</td>
+      </tr>
+    </table>
+</div>
+<div>
+  <div></div>
+    <table style="width:100%">
+      <tr>
+        <td>Lease Cost :</td>
+        <td>{{roiData.leaseCost}}</td>
+      </tr>
+      <tr>
+        <td>Payback Period :</td>
+        <td>{{roiData.leasePeriod}}  months</td>
+      </tr>
+    </table>
+</div>
+</ion-content>
+<ion-footer-bar class="footer">
+  <button light (click)="next()" class="positive-button">Physician Info</button>
+</ion-footer-bar>
