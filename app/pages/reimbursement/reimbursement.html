@@ -27,7 +27,7 @@
 
     <ion-item>
       <ion-label>Patient Fee ($)</ion-label>
-      <ion-input type="number" [(ngModel)]="procedure.fees"></ion-input>
+      <ion-input type="number" ngController ="isInteger" [(ngModel)]="procedure.fees"></ion-input>
     </ion-item>
   </div>
 </ion-content>

@@ -13,19 +13,27 @@
     <div *ngIf="roiData.procedures">
       <!-- Go insied ONLY IF there is a selected product -->
       <ion-item *ngFor="let procedure of roiData.procedures">
-        <ion-label>{{procedure.name}}<div >Number of patients treated</div></ion-label>
-        <ion-input type="number" [(ngModel)]="procedure.numberOfPatients"></ion-input>
+        <ion-label>{{procedure.name}}
+          <div>Number of patients treated</div>
+        </ion-label>
+        <ion-input type="number" ngController="isInteger" [(ngModel)]="procedure.numberOfPatients"></ion-input>
       </ion-item>
     </div>
   </div>
 
-  <form [ngFormModel]="facilityForm" (submit)="submit()">
+  <!-- <form [ngFormModel]="facilityForm" (submit)="submit()">
     <input ngControl="email" type="text" [(ngModel)]="roiData.email" placeholder="Your email">
     <input ngControl="password" type="password" [(ngModel)]="roiData.password" placeholder="Your password">
     <button type="submit" [disabled]="!facilityForm.valid">Log in</button>
-  </form>
+  </form> -->
+  <!-- <roi-pipes></roi-pipes> -->
+  <!-- <div>Toggle Date{{ birthday | date:format }}
+    <button light (click)="toggleFormat()">Toggle Format</button>
+  </div> -->
+
 </ion-content>
 
 <ion-footer-bar class="footer">
-  <button light (click)="next()" class="positive-button" >Reimbursement</button>
+  <button light (click)="next()" class="positive-button" [disabled]="!roiData.product">Reimbursement</button>
+  <button light (click)="navigate()" class="positive-button">Pipes</button>
 </ion-footer-bar>

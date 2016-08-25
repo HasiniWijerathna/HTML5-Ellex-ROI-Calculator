@@ -33,3 +33,16 @@ export function passwordValidator(control) {
 
   return result;
 }
+
+// Checks if the given value is an integer
+export function isIntegerValidator(control) {
+  let result = null;
+
+  if (!control || !control.value || !Constants.VALIDATION_PATTERNS.INTEGER.test(control.value)) {
+    result = {
+      notInteger: true
+    };
+  }
+
+  return result;
+}

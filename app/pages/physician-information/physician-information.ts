@@ -10,7 +10,6 @@ import { emailAddressValidator, passwordValidator, isIntegerValidator } from '..
 })
 export class PhysicianInformationPageComponent {
 
-  private navController = NavController;
   private facilityForm: ControlGroup;
   constructor(navController: NavController) {
 

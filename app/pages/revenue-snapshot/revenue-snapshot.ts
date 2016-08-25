@@ -2,6 +2,7 @@ import { Component, ElementRef, AfterViewChecked } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { DataService } from '../../providers/data-service/data-service';
+import { FinancialSnapshotPageComponent }from '../financial-snapshot/financial-snapshot';
 import { ROIData } from '../../models/roi-data/roi-data';
 
 // Declare MacsJS interface
@@ -12,7 +13,7 @@ declare let macs: any;
 })
 export class RevenueSnapshotPageComponent implements AfterViewChecked {
   private elementRef: ElementRef;
-  private nav: NavController;
+  private navController: NavController;
   // private nav: NavController;
   // private dataService: DataService;
   private roiData: ROIData;
@@ -22,7 +23,7 @@ export class RevenueSnapshotPageComponent implements AfterViewChecked {
   constructor(elementRef: ElementRef, nav: NavController, dataService: DataService) {
     this.roiData = dataService.getROIData();
     this.elementRef = elementRef;
-    this.nav = nav;
+    this.navController = nav;
   }
 
   // Lifecycle hook (gets executed after the view has been rendered or re-rendered)
@@ -48,7 +49,7 @@ export class RevenueSnapshotPageComponent implements AfterViewChecked {
     });
   }
 
-  private sumbit() {
-    alert('Login success');
+  public next(): void {
+    this.navController.push(FinancialSnapshotPageComponent);
   }
 }

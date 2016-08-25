@@ -12,16 +12,32 @@
   <form [ngFormModel]="facilityForm" (submit)="submit()">
     <ion-list>
       <ion-item>
-        <ion-input ngControl="email" type="text" placeholder="Your email"></ion-input>
+        <ion-input type="text" placeholder="Name"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input ngControl="email" type="text" placeholder="Your email"></ion-input>
+        <ion-input type="text" placeholder="Phone"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input ngControl="email" type="text" placeholder="Your email"></ion-input>
+        <ion-input type="text" placeholder="Email"></ion-input>
       </ion-item>
-
-      <button type="submit" [disabled]="!facilityForm.valid">Log in</button>
+      <div>
+        <ion-item>
+          <ion-input type="text" placeholder="Clinic/Hospital"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Street Address"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="City"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="State"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="Zip"></ion-input>
+        </ion-item>
+      </div>
+      <button type="submit" [disabled]="!facilityForm.valid">Report</button>
     </ion-list>
   </form>
 </ion-content>

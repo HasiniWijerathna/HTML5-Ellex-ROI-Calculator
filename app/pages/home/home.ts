@@ -7,7 +7,9 @@ import { ROIData } from '../../models/roi-data/roi-data';
 import { ROIHeaderComponent } from '../../components/roi-header/roi-header';
 import { Constants } from '../../constants';
 import { ReimbursementPageComponent } from '../reimbursement/reimbursement';
-import { emailAddressValidator, passwordValidator } from '../../validators/custom-validators';
+import { emailAddressValidator, passwordValidator, isIntegerValidator } from '../../validators/custom-validators';
+import {AgeSliderPageComponent }from '../age-slider/age-slider';
+
 
 @Component({
   templateUrl: 'build/pages/home/home.html',
@@ -29,10 +31,25 @@ export class HomePageComponent {
 
     this.roiData = dataService.getROIData();
 
+    // this.facilityForm = new ControlGroup({
+    //   email: new Control('email', emailAddressValidator),
+    //   password: new Control('password', passwordValidator),
+    //   integer: new Control('integer', isIntegerValidator)
+    // });
+
     this.facilityForm = new ControlGroup({
       email: new Control('email', emailAddressValidator),
-      password: new Control('password', passwordValidator),
+      integer: new Control('integer', isIntegerValidator),
+      password: new Control('password', passwordValidator)
     });
+  }
+
+  birthday = new Date(1988, 3, 15); // April 15, 1988
+  toggle = true; // start with true == shortDate
+
+  get format() { return this.toggle ? 'shortDate' : 'fullDate'; }
+  toggleFormat() {
+    this.toggle = !this.toggle;
   }
 
   public onChange(): void {
@@ -70,6 +87,10 @@ export class HomePageComponent {
   public next(): void {
     this.dataService.setROIData(this.roiData);
     this.navController.push(ReimbursementPageComponent);
+  }
+
+  public navigate() {
+    this.navController.push(AgeSliderPageComponent);
   }
 
 }

@@ -67,9 +67,9 @@
   "name": "HTML5-Ellex-ROI-Calculator",
   "description": "HTML5 Ellex ROI Calculator: Html5 Applet",
   "scripts": {
-    "karma": "gulp --gulpfile test/gulpfile.js --cwd ./ karma-debug",
+    "karma": "gulp --gulpfile test/gulpfile.ts --cwd ./ karma-debug",
     "postinstall": "typings install && cp test/karma-static/*.html node_modules/karma/static",
-    "test": "gulp --gulpfile test/gulpfile.js --cwd ./ unit-test",
+    "test": "gulp --gulpfile test/gulpfile.ts --cwd ./ unit-test",
     "e2e": "gulp --gulpfile test/gulpfile.ts --cwd ./ build-e2e && protractor test/protractor.conf.js",
     "start": "ionic serve",
     "webdriver-update": "webdriver-manager update"

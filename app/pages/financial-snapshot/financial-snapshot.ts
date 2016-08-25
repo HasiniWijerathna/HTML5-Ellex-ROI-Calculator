@@ -59,7 +59,7 @@ export class FinancialSnapshotPageComponent {
     let monthlyPay = this.roiData.calculateMonthlyPay(this.roiData.interestRate, this.roiData.residual, this.roiData.leasingAmount, this.roiData.leasePeriod);
     this.roiData.monthlyPay = monthlyPay;
 
-    let FinancialTotal = this.roiData.getProcedureFees();
+    this.roiData.getProcedureFees();
   }
 
   public next(): void {
