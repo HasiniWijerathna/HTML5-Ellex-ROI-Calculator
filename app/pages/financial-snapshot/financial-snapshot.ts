@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 import { DataService } from '../../providers/data-service/data-service';
 import { ROIData } from '../../models/roi-data/roi-data';
 import { RoiCalculaionPageComponent } from '../roi-calculaion/roi-calculaion';
+import { Constants } from '../../constants';
 
 @Component({
   templateUrl: 'build/pages/financial-snapshot/financial-snapshot.html',
@@ -13,12 +14,8 @@ export class FinancialSnapshotPageComponent {
   private dataService: DataService;
   private roiData: ROIData;
 
-  public purchaseMethods: Array<any> = [{
-    type: 'Lease'
-  },
-    {
-      type: 'Cash'
-    }];
+
+  public purshaseMethods = Constants.PURCHASE_METHODS;
 
   constructor(navController: NavController, dataService: DataService) {
     this.navController = navController;
@@ -41,13 +38,12 @@ export class FinancialSnapshotPageComponent {
     this.roiData.monthlyPay = '';
     this.onValuesChange();
   }
+
   public onValuesChange() {
 
     if (this.roiData.unitPrice && this.roiData.warrantyCost) {
       let totalPurchasingPrice = this.roiData.calculateTotalPrice(this.roiData.unitPrice, this.roiData.warrantyCost);
       this.roiData.totalPurchasingPrice = totalPurchasingPrice;
-      // console.log('total ' + this.roiData.totalPurchasingPrice);
-      // console.log(this.roiData.downPayment);
     }
 
     let leasingAmount = this.roiData.calculateLeasingAmount(this.roiData.totalPurchasingPrice, this.roiData.downPayment);
@@ -65,5 +61,4 @@ export class FinancialSnapshotPageComponent {
   public next(): void {
     this.navController.push(RoiCalculaionPageComponent);
   }
-
 }

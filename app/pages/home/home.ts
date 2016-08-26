@@ -31,12 +31,6 @@ export class HomePageComponent {
 
     this.roiData = dataService.getROIData();
 
-    // this.facilityForm = new ControlGroup({
-    //   email: new Control('email', emailAddressValidator),
-    //   password: new Control('password', passwordValidator),
-    //   integer: new Control('integer', isIntegerValidator)
-    // });
-
     this.facilityForm = new ControlGroup({
       email: new Control('email', emailAddressValidator),
       integer: new Control('integer', isIntegerValidator),

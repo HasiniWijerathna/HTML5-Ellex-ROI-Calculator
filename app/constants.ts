@@ -9,6 +9,20 @@ export class Constants {
     INTEGER: /^\d+$/,
   };
 
+  public static TYPE_LEASE: number = 0;
+  public static TYPE_CASH: number = 1;
+
+  public static PURCHASE_METHODS = [
+    {
+      type: Constants.TYPE_CASH,
+      name: 'Cash'
+    },
+    {
+      type: Constants.TYPE_LEASE,
+      name: 'Lease'
+    }
+  ]
+
   public static OPTIONS = {
     1: {
       id: 1,

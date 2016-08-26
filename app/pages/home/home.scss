@@ -1,22 +1,7 @@
 .footer {
-  background: white;
-  padding: 0px 5px 0px 5px;
+    background: white;
+    padding: 0 5px;
 }
 .positive-button {
-  float: right;
+    float: right;
 }
-// .row{
-//   .col{
-//     &.col-95{
-//       @include column-genarate(95%);
-//     }
-//     &.col-5{
-//       @include column-genarate(5%);
-//       i{
-//         &:before{
-//           color: $light-gray;
-//         }
-//       }
-//     }
-//   }
-// }
